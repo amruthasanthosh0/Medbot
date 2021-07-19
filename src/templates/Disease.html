@@ -1,0 +1,29 @@
+{% extends 'indexadmin.html' %}
+{% block body %}
+<body>
+<p>&nbsp;</p>
+<form action="/adddisease" method="post"><table width="200" border="1">
+  <table width="300" border="0">
+  <tr>
+    <td>Disease</td>
+    <td><input type="text" name="textfield2" required /></td>
+  </tr>
+  <tr>
+    <td>Treatment</td>
+    <td><input type="text" name="textfield3" required /></td>
+  </tr>
+  <tr>
+    <td>Preventive Measures </td>
+    <td><input type="text" name="textfield" required /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><div align="center">
+      <input type="submit" name="Submit" value="Add"  />
+    </div></td>
+    </tr>
+</table>
+
+</form>
+</body>
+</html>
+{% endblock %}

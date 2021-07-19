@@ -1,0 +1,51 @@
+{% extends 'indexadmin.html' %}
+{% block body %}
+
+<body>
+<p>&nbsp;</p>
+<form action="/addremedy" method="post">
+<table width="200" border="0">
+  <tr>
+    <td>Disease</td>
+    <td><input type="text" name="textfield" /></td>
+  </tr>
+  <tr>
+    <td>Remedy</td>
+    <td><input type="text" name="textfield2" /></td>
+  </tr>
+  <tr>
+    <td>Instruction</td>
+    <td><input type="text" name="textfield3" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><div align="center">
+      <input type="submit" name="Submit" value="Add" />
+    </div></td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</form>
+<form action="/HomeRemedies" method="post">
+<table width="711" border="1">
+  <tr>
+    <td width="52">Rem_ID</td>
+    <td width="55">Disease</td>
+    <td width="244">Remedy</td>
+    <td width="282">Instruction</td>
+    <td width="44">&nbsp;</td>
+  </tr>
+  {% for i in val %}
+  <tr>
+    <td>{{i[0]}}</td>
+    <td>&nbsp;{{i[1]}}</td>
+    <td>&nbsp;{{i[2]}}</td>
+    <td>&nbsp;{{i[3]}}</td>
+    <td><a href="/deleterem?id={{i[0]}}">Delete</a></td>
+  </tr>
+  {% endfor %}
+</table>
+</form>
+
+</body>
+</html>
+{% endblock %}

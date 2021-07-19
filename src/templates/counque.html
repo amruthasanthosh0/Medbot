@@ -1,0 +1,40 @@
+{% extends 'indexadmin.html' %}
+{% block body %}
+
+<body>
+<p>&nbsp;</p>
+<form action="/addcounque" method="post" >
+<table width="200" border="1">
+  <tr>
+    <td>Queries</td>
+    <td><input type="text" name="textfield1" /></td>
+  </tr>
+ <tr>
+    <td colspan="2"><div align="center">
+      <input type="submit" name="Submit" value="Add" />
+    </div></td>
+    </tr>
+</table>
+</form>
+<p>&nbsp;</p>
+<form action="/councilque" method="get" name="counque">
+<table width="726" border="1">
+  <tr>
+    <td width="66">Qid</td>
+    <td width="576">Queries</td>
+    <td width="62">&nbsp;</td>
+  </tr>
+  {% for i in val %}
+  <tr>
+    <td>{{i[0]}}</td>
+    <td>{{i[1]}}</td>
+    <td><div align="center">
+     <a href="/deletecouncilque?id={{i[0]}}">Delete</a>
+    </div></td>
+  </tr>
+  {% endfor %}
+</table>
+</form>
+</body>
+</html>
+{% endblock %}

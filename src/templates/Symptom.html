@@ -1,0 +1,45 @@
+{% extends 'indexadmin.html' %}
+{% block body %}
+
+<body>
+<p>&nbsp;</p>
+<form id="form1" name="form1" method="post" action="/addsymptom"><table width="214" border="0">
+  <tr>
+    <td>diseases</td>
+    <td><select name="select">
+       {% for j in val %}
+      <option value="{{j[0]}}">{{j[1]}}</option>
+       {% endfor %}
+    </select>
+    </td>
+  </tr>
+  <tr>
+    <td width="58">Symptom</td>
+    <td width="146"><input type="text" name="textfield" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><div align="center">
+      <input type="submit" name="Submit" value="Add" />
+    </div></td>
+    </tr>
+</table>
+  <p>&nbsp;</p>
+  <table width="723" border="1">
+  <tr>
+    <td width="98">Disease</td>
+    <td width="538">Symptom</td>
+    <td width="65">&nbsp;</td>
+  </tr>
+  {% for i in value %}
+  <tr>
+    <td>{{i[0]}}</td>
+    <td>&nbsp;{{i[2]}}</td>
+    <td><div align="center">
+     <a href="/deletesymptom?id={{i[1]}}">Delete</a> </td>
+  </tr>
+  {% endfor %}
+</table>
+</form>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'indexadmin.html' %}
+{% block body %}
+
+<body>
+
+<form action="/adddiet" method="post" name="dietresult">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <table width="254" border="1">
+  <tr>
+    <td width="87">BMI Score</td>
+    <td width="151"><input type="text" name="textfield" /></td>
+  </tr>
+  <tr>
+    <td>Drinks</td>
+    <td><input type="text" name="textfield2" /></td>
+  </tr>
+  <tr>
+    <td>Foods</td>
+    <td><input type="text" name="textfield3" /></td>
+  </tr>
+  <tr>
+    <td>BMI Age </td>
+    <td><input type="text" name="textfield5" /></td>
+  </tr>
+  <tr>
+    <td>Exercise</td>
+    <td><input type="text" name="textfield4" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><div align="center">
+      <input type="submit" name="Submit2" value="ADD" />
+    </div></td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+<table width="724" border="1">
+  <tr>
+    <td width="51">BMI Score</td>
+    <td width="51">BMI Age</td>
+    <td width="148">Drinks</td>
+    <td width="192">Foods</td>
+    <td width="193">Exercise</td>
+	<td width="49">&nbsp;</td>
+  </tr>
+  {% for i in val %}
+  <tr>
+    <td>{{i[0]}}</td>
+    <td>{{i[4]}}</td>
+    <td>&nbsp;{{i[1]}}</td>
+    <td>&nbsp;{{i[2]}}</td>
+    <td>&nbsp;{{i[3]}}</td>
+    <td><div align="center">
+      <a href="/deletediet?id={{i[5]}}">Delete</a>
+    </div></td>
+  </tr>
+  {% endfor %}
+</table>
+</form>
+</body>
+</html>
+{% endblock %}

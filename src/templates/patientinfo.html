@@ -1,0 +1,68 @@
+{% extends 'indexadmin.html' %}
+{% block body %}
+
+<body>
+<p>&nbsp;</p>
+<form action="" method="post" name="patientinfo">
+<table width="329" border="0">
+  <tr>
+    <td width="95"><div align="left">Name</div></td>
+    <td width="224"><div align="center">
+      <input type="text" name="textfield" />
+    </div></td>
+  </tr>
+  <tr>
+    <td>Age</td>
+    <td><div align="center">
+      <input type="text" name="textfield2" />
+    </div></td>
+  </tr>
+  <tr>
+    <td>Gender</td>
+    <td><input type="checkbox" name="checkbox" value="checkbox" />
+      Female
+        <input type="checkbox" name="checkbox2" value="checkbox" />
+      Male
+      <input type="checkbox" name="checkbox3" value="checkbox" />
+      Others</td>
+  </tr>
+  <tr>
+    <td>Height</td>
+    <td><div align="center">
+      <input name="textfield3" type="text" value="in cm" />
+    </div></td>
+  </tr>
+  <tr>
+    <td>Weight</td>
+    <td><div align="center">
+      <input name="textfield4" type="text" value="in kg" />
+    </div></td>
+  </tr>
+  <tr>
+    <td>Blood Group </td>
+    <td>
+      <div align="left">
+        <select name="se">
+          <option>O+ve</option>
+          <option>O-ve</option>
+          <option>A+ve</option>
+          <option>A-ve</option>
+          <option>B+ve</option>
+          <option>B-ve</option>
+          <option>AB+ve</option>
+          <option>AB-ve</option>
+        </select>
+        </div></td>
+  </tr>
+  <tr>
+    <td>Location</td>
+    <td><div align="center">
+      <input type="text" name="textfield6" />
+    </div></td>
+  </tr>
+ 
+</table>
+</form>
+</body>
+</html>
+{% endblock %}

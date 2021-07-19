@@ -1,0 +1,19 @@
+{% extends 'indexadmin.html' %}
+{% block body %}
+
+<body>
+<p>&nbsp;</p>
+<form id="form1" name="form1" method="post" action="">
+<table width="467" height="97" border="1">
+  <tr>
+    <td width="457" height="35"><div align="center">Symptom</div></td>
+  </tr>
+    {% for i in var %}
+  <tr>
+    <td height="54">{{i[1]}}</td>
+  </tr>
+    {% endfor %}
+</table></form>
+</body>
+</html>
+{% endblock %}
